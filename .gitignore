@@ -1,3 +1,11 @@
-//---------------------
-*.class
+### VS Code ###
+.vscode/
+*.code-workspace
+
+### BlueJ ###
 *.ctxt
+.bluej/
++*.pkh
+
+#Java
+*.class
