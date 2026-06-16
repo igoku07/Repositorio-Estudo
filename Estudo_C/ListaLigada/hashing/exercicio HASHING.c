@@ -11,12 +11,13 @@
 
 typedef unsigned int TipoChave;
 
+unsigned char Hash(TipoChave);
+
 // Deve ser feito Mod por 13
 
 int main (){
 	int j,c,k;
 	unsigned char hC;
-
 	unsigned char Matriz[Max][2];
 
 	TipoChave key;
@@ -39,9 +40,24 @@ int main (){
     printf("\n");
 
 
-	for(k = 0; k < 47; k++)
+	key = 0;
+	for(k = 0; k < Max; k++)
+	{
+		key = A[k]; //pego o valor numerico da chave
+		unsigned char indice = Hash(key);
+		 //aqui eu monto o indice do array, das chaves, hasheando espalhando
+			Matriz[indice][0] = indice;
+			Matriz[indice][1] = key;
+	}
+
+
+	for(k = 0; k < Max; k++)
 	{
 
+		for(j = 0; j < 2; j++)
+		{
+			printf("indice %d  key %d \n",Matriz[k][j]);
+		}
 
 	}
 
@@ -57,10 +73,3 @@ unsigned char Hash(TipoChave key)
 
 }
 
-unsigned char mostrarTabela(TipoChave key, unsigned char index)
-{
-	
-
-
-
-}
