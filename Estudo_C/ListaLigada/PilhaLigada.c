@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define fasntasma -1
+#define fantasma -1
 
 typedef struct Celula
 {
